@@ -1,0 +1,19 @@
+<div style="margin: 0 auto; margin-top: 50px; width: 40%">
+  <form (ngSubmit)="login(f)" #f="ngForm" class="form-horizontal">
+    <div style="margin-bottom: 25px" class="input-group row col-lg-12 text-center">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input id="username" class="form-control" placeholder="username" name="username" ngModel>
+    </div>
+    <div style="margin-bottom: 25px" class="input-group row col-lg-12 text-center">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input class="form-control" id="password" placeholder="password" name="password"
+             type="password" ngModel>
+    </div>
+    <div class="form-group row col-lg-12 text-center">
+      <div>
+        <input id="btn-login" class="btn btn-success" type="submit" value="Login"
+               [disabled]="!f.valid"/>
+      </div>
+    </div>
+  </form>
+</div>
